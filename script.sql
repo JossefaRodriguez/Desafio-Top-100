@@ -14,8 +14,7 @@ SELECT id FROM peliculas WHERE pelicula = 'Titanic';
 -- Consulta (todo el reparto de Titanic)
 SELECT * FROM reparto WHERE peliculas_fk = 2;
 -- Consulta ( top 100 de Harrison)
-SELECT peliculas_fk FROM reparto WHERE actor = 'Harrison Ford';
-SELECT COUNT(*) FROM peliculas WHERE id IN (48, 59, 63, 67, 69,87,88,97);
+SELECT COUNT(peliculas_fk) FROM reparto WHERE actor = 'Harrison Ford';
 -- Consulta (pelicular ordenadas por titulo ASC entre los años 1990 y 1999)
 SELECT * FROM peliculas WHERE anio_estreno BETWEEN 1990 AND 1999 ORDER BY pelicula ASC;
 -- Consulta (longitud de los titulos)
